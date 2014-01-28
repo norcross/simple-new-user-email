@@ -30,7 +30,7 @@ This section describes how to install the plugin and get it working.
 
 ## Changelog
 
-### 1.0.0 ###
+##### 1.0.0 #####
 * First release!
 
 
