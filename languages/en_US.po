@@ -1,0 +1,145 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: simple-new-user-email\n"
+"POT-Creation-Date: 2014-01-27 22:41-0500\n"
+"PO-Revision-Date: 2014-01-27 22:41-0500\n"
+"Last-Translator: Andrew Norcross <andrew@andrewnorcross.com>\n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.3\n"
+"X-Poedit-Basepath: ../\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _;__;_e\n"
+"X-Poedit-SearchPath-0: lib\n"
+"X-Poedit-SearchPath-1: .\n"
+
+#: simple-new-user-email.php:104 simple-new-user-email.php:131
+msgid "New User Emails"
+msgstr ""
+
+#: simple-new-user-email.php:134
+msgid ""
+"Use the following tags (with curly brackets) for specific pieces of data "
+"created during signup"
+msgstr ""
+
+#: simple-new-user-email.php:136
+msgid "User Name"
+msgstr ""
+
+#: simple-new-user-email.php:137
+msgid "User Email"
+msgstr ""
+
+#: simple-new-user-email.php:138
+msgid "Password"
+msgstr ""
+
+#: simple-new-user-email.php:139
+msgid "Login URL"
+msgstr ""
+
+#: simple-new-user-email.php:146
+msgid "User Email Notification"
+msgstr ""
+
+#: simple-new-user-email.php:151 simple-new-user-email.php:196
+msgid "From Name"
+msgstr ""
+
+#: simple-new-user-email.php:154 simple-new-user-email.php:199
+msgid "The name the email will be sent from"
+msgstr ""
+
+#: simple-new-user-email.php:159 simple-new-user-email.php:204
+msgid "From Address"
+msgstr ""
+
+#: simple-new-user-email.php:162 simple-new-user-email.php:207
+msgid "The email address sent from"
+msgstr ""
+
+#: simple-new-user-email.php:167 simple-new-user-email.php:220
+msgid "Email Subject"
+msgstr ""
+
+#: simple-new-user-email.php:170 simple-new-user-email.php:223
+msgid "The email subject line"
+msgstr ""
+
+#: simple-new-user-email.php:175 simple-new-user-email.php:228
+msgid "Email Content"
+msgstr ""
+
+#: simple-new-user-email.php:184
+msgid ""
+"This is the email that will be sent when a new user is added / approved."
+msgstr ""
+
+#: simple-new-user-email.php:191
+msgid "Admin Email Notification"
+msgstr ""
+
+#: simple-new-user-email.php:212
+msgid "To Address"
+msgstr ""
+
+#: simple-new-user-email.php:215
+msgid "The email address to send the notification"
+msgstr ""
+
+#: simple-new-user-email.php:237
+msgid ""
+"This is the admin content that will be sent when a new user is added / "
+"approved."
+msgstr ""
+
+#: simple-new-user-email.php:244
+msgid "Save Changes"
+msgstr ""
+
+#: simple-new-user-email.php:268
+msgid "Hello,"
+msgstr ""
+
+#: simple-new-user-email.php:269
+#, php-format
+msgid "Welcome to %s! Here's how to log in:"
+msgstr ""
+
+#: simple-new-user-email.php:271 simple-new-user-email.php:290
+#, php-format
+msgid "Username: %s"
+msgstr ""
+
+#: simple-new-user-email.php:272
+#, php-format
+msgid "Password: %s"
+msgstr ""
+
+#: simple-new-user-email.php:273
+#, php-format
+msgid "If you have any problems, please contact %s."
+msgstr ""
+
+#: simple-new-user-email.php:289
+#, php-format
+msgid "New user registration on %s:"
+msgstr ""
+
+#: simple-new-user-email.php:291
+#, php-format
+msgid "E-mail: %s"
+msgstr ""
+
+#: simple-new-user-email.php:365
+msgid "Your username and password"
+msgstr ""
+
+#: simple-new-user-email.php:396
+msgid "New signup"
+msgstr ""
