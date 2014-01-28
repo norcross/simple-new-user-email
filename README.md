@@ -4,10 +4,12 @@
 
 * Andrew Norcross ( [@norcross](http://twitter.com/norcross ) / [andrewnorcross.com](http://andrewnorcross.com/) )
 
-**Version**: 1.0.0
-**Requires at least**: 3.8
-**Tested up to**: 3.8
-**License**: GPLv2
+**Details**:
+
+* Version: 1.0.0
+* Requires at least: 3.8
+* Tested up to: 3.8
+* License: GPLv2
 
 
 ## Description
