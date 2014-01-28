@@ -10,12 +10,12 @@
 **License**: GPLv2
 
 
-## Description ##
+## Description
 
 Provides a settings panel to modify the default new user email
 
 
-## Installation ##
+## Installation
 
 This section describes how to install the plugin and get it working.
 
@@ -23,24 +23,10 @@ This section describes how to install the plugin and get it working.
 1. Activate the plugin through the 'Plugins' menu in WordPress.
 1. Navigate to a the settings page under 'Tools'
 
-## Frequently Asked Questions ##
+## Frequently Asked Questions
 
 
-### What's this all about? ###
-
-Something
-
-
-## Screenshots ##
-
-###1. Something
-###
-[missing image]
-
-
-
-
-## Changelog ##
+## Changelog
 
 ### 1.0.0 ###
 * First release!
