@@ -68,7 +68,6 @@ class RKV_Simple_New_User_Email
 		if ( is_object( $screen ) && $screen->base == 'tools_page_new-user-emails' ):
 
 			wp_enqueue_style( 'snue-admin', plugins_url( 'lib/css/snue.admin.css', __FILE__), array(), RKV_SNUE_VER, 'all' );
-//			wp_enqueue_script( 'wklg', plugins_url('/lib/js/wklg.init.js', __FILE__) , array('jquery'), RKV_SNUE_VER, true );
 
 		endif;
 
@@ -268,12 +267,15 @@ class RKV_Simple_New_User_Email
 
 		$user_login	= stripslashes( $user->user_login );
 
-		$message  = __( 'Hello,' , 'simple-new-user-email' ) . '<br />';
-		$message .= sprintf( __( 'Welcome to %s! Here\'s how to log in:', 'simple-new-user-email' ), get_option( 'blogname' ) ) . '<br /><br />';
-		$message .= wp_login_url() . '<br /><br />';
-		$message .= sprintf( __( 'Username: %s', 'simple-new-user-email' ), $user_login ) . '<br />';
-		$message .= sprintf( __( 'Password: %s', 'simple-new-user-email' ), $plaintext_pass ) . '<br />';
-		$message .= sprintf( __( 'If you have any problems, please contact %s.', 'simple-new-user-email' ), get_option( 'admin_email' ) );
+		$default	= __( 'Hello,' , 'simple-new-user-email' ) . '<br />';
+		$default	.= sprintf( __( 'Welcome to %s! Here\'s how to log in:', 'simple-new-user-email' ), get_option( 'blogname' ) ) . '<br /><br />';
+		$default	.= wp_login_url() . '<br /><br />';
+		$default	.= sprintf( __( 'Username: %s', 'simple-new-user-email' ), $user_login ) . '<br />';
+		$default	.= sprintf( __( 'Password: %s', 'simple-new-user-email' ), $plaintext_pass ) . '<br />';
+		$default	.= sprintf( __( 'If you have any problems, please contact %s.', 'simple-new-user-email' ), get_option( 'admin_email' ) );
+
+		// filter message
+		$message	= apply_filters( 'snue_user_default_content', $default );
 
 		return $message;
 
@@ -289,9 +291,12 @@ class RKV_Simple_New_User_Email
 		$user_login	= stripslashes( $user->user_login );
 		$user_email	= stripslashes( $user->user_email );
 
-		$message	= sprintf( __( 'New user registration on %s:', 'simple-new-user-email' ), get_option('blogname') ) . '<br />';
-		$message	.= sprintf( __( 'Username: %s', 'simple-new-user-email' ), $user_login ) . '<br />';
-		$message	.= sprintf( __( 'E-mail: %s', 'simple-new-user-email' ), $user_email ) . '<br />';
+		$default	= sprintf( __( 'New user registration on %s:', 'simple-new-user-email' ), get_option('blogname') ) . '<br />';
+		$default	.= sprintf( __( 'Username: %s', 'simple-new-user-email' ), $user_login ) . '<br />';
+		$default	.= sprintf( __( 'E-mail: %s', 'simple-new-user-email' ), $user_email ) . '<br />';
+
+		// filter message
+		$message	= apply_filters( 'snue_admin_default_content', $default );
 
 		return $message;
 
@@ -313,6 +318,7 @@ class RKV_Simple_New_User_Email
 
 		$text	= str_replace( $hold, $full, $text );
 
+		// filter the text for other possible search replace
 		$text	= apply_filters( 'snue_user_email_content', $text );
 
 		$message	= '
@@ -323,6 +329,10 @@ class RKV_Simple_New_User_Email
 		</html>
 		';
 
+		// filter the message for HTML modifications, etc
+		$message	= apply_filters( 'snue_user_email_message', $message );
+
+		// return the message
 		return trim( $message );
 
 	}
@@ -342,6 +352,7 @@ class RKV_Simple_New_User_Email
 
 		$text	= str_replace( $hold, $full, $text );
 
+		// filter the text for other possible search replace
 		$text	= apply_filters( 'snue_admin_email_content', $text );
 
 		$message	= '
@@ -352,6 +363,10 @@ class RKV_Simple_New_User_Email
 		</html>
 		';
 
+		// filter the message for HTML modifications, etc
+		$message	= apply_filters( 'snue_admin_email_message', $message );
+
+		// return the message
 		return trim( $message );
 
 	}
@@ -431,6 +446,7 @@ class RKV_Simple_New_User_Email
 
 		// set my headers
 		$headers	= 'From: '.$items['name'].' <'.$items['from'].'>' . "\r\n" ;
+		$headers	= apply_filters( 'snue_user_email_headers', $headers );
 
 		// send the actual email
 		wp_mail( $items['to'], $items['intro'], $items['text'], $headers );
@@ -457,6 +473,7 @@ class RKV_Simple_New_User_Email
 
 		// set my headers
 		$headers	= 'From: '.$items['name'].' <'.$items['from'].'>' . "\r\n" ;
+		$headers	= apply_filters( 'snue_admin_email_headers', $headers );
 
 		// send the actual email
 		wp_mail( $items['to'], $items['intro'], $items['text'], $headers );
